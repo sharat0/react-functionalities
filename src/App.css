@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+button{
+  height: auto;
+  width: auto;
+  padding: 5px 10px;
+  font-size: .9rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input{
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+
+.drive-img{
+  width: 250px;
+  height: 250px;
+  border: 1px solid #f0f0f0;
+}
