@@ -1,4 +1,4 @@
-.App {
+.App, #imageUrlForm {
   text-align: center;
 }
 
@@ -43,6 +43,7 @@ button{
   font-size: .9rem;
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 input{
@@ -50,8 +51,25 @@ input{
   padding: 5px 10px;
 }
 
-.drive-img{
-  width: 250px;
+.drive-img, .urlImage{
+  width: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: 250px;
   border: 1px solid #f0f0f0;
+}
+
+.searchImg{
+  width: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: 250px;
+  cursor: pointer;
+}
+
+h2{
+  margin-bottom: 0;
+  margin-top: 40px;
 }

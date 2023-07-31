@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import ImageFromURL from './components/ImageFromURL';
+import ImageSearch from "./components/ImageSearch";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
-    <App />
- 
+
+    <div id='app'>
+        <App />
+        <ImageSearch/>
+        <ImageFromURL />
+    </div>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

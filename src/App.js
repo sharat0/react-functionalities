@@ -4,23 +4,23 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [openPicker, data, authResponsive] = useDrivePicker();
-  const [selectedImage, setSelectedImage] = useState(null); // State to store the selected image
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleOpenPicker = () => {
     try {
       openPicker({
-        clientId:'40933126903-1v96olplokq9tvtbqltg5e06r4fmq81h.apps.googleusercontent.com',
-        developerKey:'AIzaSyC1-p7REKwhaEMc3RygAgKmR9D3l_K1UBs',
+        clientId: '40933126903-1v96olplokq9tvtbqltg5e06r4fmq81h.apps.googleusercontent.com',
+        developerKey: 'AIzaSyC1-p7REKwhaEMc3RygAgKmR9D3l_K1UBs',
         viewId: "DOCS",
         showUploadView: true,
         showUploadFolders: true,
         supportDrives: true,
-        multiselect: false, // Set multiselect to false since we want only one image
+        multiselect: false,
         callbackFunction: (data) => {
-          if (data.action === 'picked') { // Check if an image was picked
+          if (data.action === 'picked') {
             const fileId = data.docs[0].id;
             const selectedImageURL = `https://drive.google.com/uc?export=view&id=${fileId}`;
-            setSelectedImage({ name: data.docs[0].name, url: selectedImageURL }); // Update the selected image state
+            setSelectedImage({ name: data.docs[0].name, url: selectedImageURL });
           } else if (data.action === 'cancel') {
             console.log('User clicked cancel/close button');
           }
@@ -40,11 +40,12 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={() => handleOpenPicker()}>Open Drive Picker</button>
+        <h2>Select Image - Drive :</h2>
+        <button onClick={() => handleOpenPicker()}>Open Drive Picker</button>
+      
       {selectedImage && (
         <div>
-          <h2>Selected Image:</h2>
-          <img src={selectedImage.url} alt={selectedImage.name}  className='drive-img'/>
+          <img src={selectedImage.url} alt={selectedImage.name} className='drive-img' />
         </div>
       )}
     </div>
