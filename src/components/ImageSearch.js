@@ -33,7 +33,7 @@ const ImageSearch = () => {
 
       setImages(response.data.results);
       setShowResults(true);
-      setSelectedImage(null); // Clear the selected image when new results are fetched.
+      setSelectedImage(null);
     } catch (error) {
       console.error('Error fetching images:', error);
     }
@@ -47,7 +47,7 @@ const ImageSearch = () => {
   return (
     <div id='imageSearch' className='App'>
       <form onSubmit={handleSubmit}>
-      <h2>Image Search :</h2>
+        <h2>Image Search :</h2>
         <input
           type="text"
           value={searchText}
@@ -73,8 +73,8 @@ const ImageSearch = () => {
 
       {!showResults && selectedImage && (
         <div>
-          <img src={selectedImage.urls.regular} alt={selectedImage.alt_description} className='searchImg'/>
-          <br/>
+          <img src={selectedImage.urls.regular} alt={selectedImage.alt_description} className='searchImg' />
+          <br />
           <button onClick={() => setShowResults(true)}>Back to Results</button>
         </div>
       )}

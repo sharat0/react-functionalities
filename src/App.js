@@ -42,7 +42,6 @@ function App() {
     <div className="App">
         <h2>Select Image - Drive :</h2>
         <button onClick={() => handleOpenPicker()}>Open Drive Picker</button>
-      
       {selectedImage && (
         <div>
           <img src={selectedImage.url} alt={selectedImage.name} className='drive-img' />
