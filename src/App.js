@@ -39,9 +39,10 @@ function App() {
   }, [data]);
 
   return (
-    <div className="App">
-        <h2>Select Image - Drive :</h2>
-        <button onClick={() => handleOpenPicker()}>Open Drive Picker</button>
+    <div className="App" id="driveImage">
+      
+      <h2>Select Image - Drive :</h2>
+      <button onClick={() => handleOpenPicker()}>Open Drive Picker</button>
       {selectedImage && (
         <div>
           <img src={selectedImage.url} alt={selectedImage.name} className='drive-img' />

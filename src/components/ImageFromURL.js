@@ -13,7 +13,7 @@ const ImageFromURL = () => {
   };
   
   return (
-    <div id='imageUrlForm'>
+    <div id='imageUrlForm' className='App'>
       <h2>Get Image from URL :</h2>
         <input
           type="text"
