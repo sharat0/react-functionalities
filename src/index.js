@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Nav from './components/Nav';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ImageFromURL from './components/ImageFromURL';
@@ -11,12 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
     <div id='app'>
-        <App />
-        <ImageSearch/>
-        <ImageFromURL />
-        <ImageUploader/>
-        <DropboxImageChooser/>
-        <CameraCapture/>
+        <Nav />
     </div>
 
 );
